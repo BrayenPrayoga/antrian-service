@@ -1,0 +1,713 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Lumen",
+        "description": "This is Documentation of Lumen",
+        "contact": {
+            "email": "brayenprayoga41@gmail.com"
+        },
+        "version": "3.0.0"
+    },
+    "servers": [
+        {
+            "url": "http://localhost:8000/",
+            "description": "Localhost"
+        }
+    ],
+    "paths": {
+        "/auth/login": {
+            "post": {
+                "tags": [
+                    "Login"
+                ],
+                "operationId": "8cb7742ae98d0990acb2907c4e00bf24",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+                                    "email": {
+                                        "title": "email",
+                                        "description": "email",
+                                        "example": "no-reply@gmail.com"
+                                    },
+                                    "password": {
+                                        "title": "password",
+                                        "description": "Password",
+                                        "example": "P@ssw0rd"
+                                    },
+                                    "role": {
+                                        "title": "Role",
+                                        "description": "Role",
+                                        "example": "DASHBOARD/SELF_SERVICE/COUNTER"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            }
+        },
+        "/auth/register": {
+            "post": {
+                "tags": [
+                    "Register"
+                ],
+                "operationId": "ed42f392010c301892e640067141676e",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+                                    "nama": {
+                                        "title": "nama",
+                                        "description": "nama",
+                                        "example": ""
+                                    },
+                                    "email": {
+                                        "title": "email",
+                                        "description": "email",
+                                        "example": "no-reply@gmail.com"
+                                    },
+                                    "password": {
+                                        "title": "password",
+                                        "description": "Password",
+                                        "example": "P@ssw0rd"
+                                    },
+                                    "role": {
+                                        "title": "Role",
+                                        "description": "Role",
+                                        "example": "DASHBOARD/SELF_SERVICE/COUNTER"
+                                    },
+                                    "kode_dealer": {
+                                        "title": "Kode Dealer",
+                                        "description": "Kode Dealer",
+                                        "example": ""
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            }
+        },
+        "/user/master-dealer": {
+            "get": {
+                "tags": [
+                    "Master Dealer"
+                ],
+                "operationId": "922f31d8757b16ba877a9f3a02b2c3ea",
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "security": [
+                    {
+                        "apiAuth": []
+                    }
+                ]
+            }
+        },
+        "/user/master-dealer/simpan": {
+            "post": {
+                "tags": [
+                    "Master Dealer"
+                ],
+                "operationId": "1a8c050c2341c476a9a05fbc3a8b241d",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+                                    "kode_dealer": {
+                                        "title": "Kode Dealer",
+                                        "description": "Kode Dealer",
+                                        "example": ""
+                                    },
+                                    "nama": {
+                                        "title": "nama",
+                                        "description": "nama",
+                                        "example": ""
+                                    },
+                                    "kode_menu": {
+                                        "title": "Kode Menu",
+                                        "description": "Kode Menu",
+                                        "example": ""
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "security": [
+                    {
+                        "apiAuth": []
+                    }
+                ]
+            }
+        },
+        "/user/master-dealer/edit": {
+            "post": {
+                "tags": [
+                    "Master Dealer"
+                ],
+                "operationId": "51c4dd80910d12255d3888f7249af211",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+                                    "kode_dealer": {
+                                        "title": "Kode Dealer",
+                                        "description": "Kode Dealer",
+                                        "example": ""
+                                    },
+                                    "nama": {
+                                        "title": "nama",
+                                        "description": "nama",
+                                        "example": ""
+                                    },
+                                    "kode_menu": {
+                                        "title": "Kode Menu",
+                                        "description": "Kode Menu",
+                                        "example": ""
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "security": [
+                    {
+                        "apiAuth": []
+                    }
+                ]
+            }
+        },
+        "/user/master-dealer/hapus": {
+            "get": {
+                "tags": [
+                    "Master Dealer"
+                ],
+                "operationId": "934429793f7ada1b9dc3124703f92b11",
+                "parameters": [
+                    {
+                        "name": "kode_dealer",
+                        "in": "query",
+                        "description": "Kode Dealer",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "security": [
+                    {
+                        "apiAuth": []
+                    }
+                ]
+            }
+        },
+        "/user/master-menu": {
+            "get": {
+                "tags": [
+                    "Master Menu"
+                ],
+                "operationId": "45cdb07d74111abaa4ad6e413eb506b3",
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "security": [
+                    {
+                        "apiAuth": []
+                    }
+                ]
+            }
+        },
+        "/user/master-menu/simpan": {
+            "post": {
+                "tags": [
+                    "Master Menu"
+                ],
+                "operationId": "b53ca90e67e337ddfb50baa8720231f0",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+                                    "kode_menu": {
+                                        "title": "Kode Menu",
+                                        "description": "Kode Menu",
+                                        "example": ""
+                                    },
+                                    "nama": {
+                                        "title": "nama",
+                                        "description": "nama",
+                                        "example": ""
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "security": [
+                    {
+                        "apiAuth": []
+                    }
+                ]
+            }
+        },
+        "/user/master-menu/edit": {
+            "post": {
+                "tags": [
+                    "Master Menu"
+                ],
+                "operationId": "d3389775c0e361f59c81d49001859cef",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+                                    "kode_menu": {
+                                        "title": "Kode Menu",
+                                        "description": "Kode Menu",
+                                        "example": ""
+                                    },
+                                    "nama": {
+                                        "title": "nama",
+                                        "description": "nama",
+                                        "example": ""
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "security": [
+                    {
+                        "apiAuth": []
+                    }
+                ]
+            }
+        },
+        "/user/master-menu/hapus": {
+            "get": {
+                "tags": [
+                    "Master Menu"
+                ],
+                "operationId": "ee44c2ec581e917faa851f9967323063",
+                "parameters": [
+                    {
+                        "name": "kode_menu",
+                        "in": "query",
+                        "description": "Kode menu",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "security": [
+                    {
+                        "apiAuth": []
+                    }
+                ]
+            }
+        },
+        "/user/master-ukuran-layar": {
+            "get": {
+                "tags": [
+                    "Master Ukuran Layar"
+                ],
+                "operationId": "9055212e63e533ed3e280160c65caca3",
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "security": [
+                    {
+                        "apiAuth": []
+                    }
+                ]
+            }
+        },
+        "/user/master-ukuran-layar/simpan": {
+            "post": {
+                "tags": [
+                    "Master Ukuran Layar"
+                ],
+                "operationId": "1f25d55f745e1dc77900417ccc8ecb02",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+                                    "width": {
+                                        "title": "Width",
+                                        "description": "Width",
+                                        "example": ""
+                                    },
+                                    "height": {
+                                        "title": "Height",
+                                        "description": "Height",
+                                        "example": ""
+                                    },
+                                    "kode_dealer": {
+                                        "title": "kode_dealer",
+                                        "description": "kode_dealer",
+                                        "example": ""
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "security": [
+                    {
+                        "apiAuth": []
+                    }
+                ]
+            }
+        },
+        "/user/master-ukuran-layar/edit": {
+            "post": {
+                "tags": [
+                    "Master Ukuran Layar"
+                ],
+                "operationId": "31b26363a2b379b10c950d5627145110",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+                                    "width": {
+                                        "title": "Width",
+                                        "description": "Width",
+                                        "example": ""
+                                    },
+                                    "height": {
+                                        "title": "Height",
+                                        "description": "Height",
+                                        "example": ""
+                                    },
+                                    "kode_dealer": {
+                                        "title": "kode_dealer",
+                                        "description": "kode_dealer",
+                                        "example": ""
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "security": [
+                    {
+                        "apiAuth": []
+                    }
+                ]
+            }
+        },
+        "/user/master-ukuran-layar/hapus": {
+            "get": {
+                "tags": [
+                    "Master Ukuran Layar"
+                ],
+                "operationId": "2cb63e0632260fad6c48d2c846d7d275",
+                "parameters": [
+                    {
+                        "name": "kode_dealer",
+                        "in": "query",
+                        "description": "Kode Dealer",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "security": [
+                    {
+                        "apiAuth": []
+                    }
+                ]
+            }
+        },
+        "/user/transaksi": {
+            "get": {
+                "tags": [
+                    "Transaksi"
+                ],
+                "operationId": "28cf0e2c6e5ff37c572a62cafbc538e6",
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "security": [
+                    {
+                        "apiAuth": []
+                    }
+                ]
+            }
+        },
+        "/user/transaksi/simpan": {
+            "post": {
+                "tags": [
+                    "Transaksi"
+                ],
+                "operationId": "31fc4c99fff6109b0ae80ca9e52e3913",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+                                    "kode_dealer": {
+                                        "title": "Kode Dealer",
+                                        "description": "Kode Dealer",
+                                        "example": ""
+                                    },
+                                    "no_antrian": {
+                                        "title": "No. Antrian",
+                                        "description": "No. Antrian",
+                                        "example": ""
+                                    },
+                                    "status": {
+                                        "title": "Status",
+                                        "description": "Status",
+                                        "example": "WAITING/DONE"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "security": [
+                    {
+                        "apiAuth": []
+                    }
+                ]
+            }
+        },
+        "/user/transaksi/edit": {
+            "post": {
+                "tags": [
+                    "Transaksi"
+                ],
+                "operationId": "c7cd2c2e218b71c69058f1eca185d26c",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+                                    "kode_dealer": {
+                                        "title": "Kode Dealer",
+                                        "description": "Kode Dealer",
+                                        "example": ""
+                                    },
+                                    "no_antrian": {
+                                        "title": "No. Antrian",
+                                        "description": "No. Antrian",
+                                        "example": ""
+                                    },
+                                    "status": {
+                                        "title": "Status",
+                                        "description": "Status",
+                                        "example": "WAITING/DONE"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "security": [
+                    {
+                        "apiAuth": []
+                    }
+                ]
+            }
+        },
+        "/user/transaksi/hapus": {
+            "get": {
+                "tags": [
+                    "Transaksi"
+                ],
+                "operationId": "31ad4a422d917bf9043c900ecb0ed00d",
+                "parameters": [
+                    {
+                        "name": "kode_transaksi",
+                        "in": "query",
+                        "description": "Kode Transaksi",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                },
+                "security": [
+                    {
+                        "apiAuth": []
+                    }
+                ]
+            }
+        }
+    },
+    "components": {
+        "securitySchemes": {
+            "apiAuth": {
+                "type": "http",
+                "description": "Hubungi Developer Untuk Akun Login",
+                "name": "Token based Based",
+                "in": "header",
+                "bearerFormat": "Passport",
+                "scheme": "bearer"
+            }
+        }
+    }
+}
